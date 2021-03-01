@@ -9,7 +9,7 @@ print(df.to_string())
 print()
 
 for x in df.index:
-    if df.loc[x, "Credit Amount"] == 'NaN':
-        df.loc[x, "Credit Amount"] = df["Debit Amount"].mean()
+    if df.loc[x, 'Credit Amount'] == '':
+        df.loc[x, 'Credit Amount'] = df["Debit Amount"].mean()
 print(df.to_string())
 print()
